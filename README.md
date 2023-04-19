@@ -3,9 +3,6 @@
 My name is Patryk Kurzawa. I am Graphic, ilustrator and Tester. I recently became interested in software testing. My goal is to develop testing knowlage and technical skills. On this site I would like to share my all gained experience from personal studies and researches
 
 # Tools
-
-<Postman><https://www.postman.com/>
-
 # Tech Skills
 # Certyficates
 # Courses
