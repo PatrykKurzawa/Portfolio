@@ -32,8 +32,8 @@ My name is Patryk Kurzawa. I am Graphic, ilustrator and Tester. I recently becam
 # Courses
 * [CodersLab Tester Manualny](https://coderslab.pl/pl/tester-manualny)
 * Photoshop od Podstaw
-* Udemy Kurs Jira od podstaw 
-* Udemy Postman od podstaw
+* [Udemy Kurs Jira od podstaw]( https://www.udemy.com/)
+* [Udemy Postman od podstaw](https://www.udemy.com/)
 
 # Books
 * Adam Roman/Lucjan Stapp "Certyfikowany Tester ISTQB"
