@@ -46,3 +46,14 @@ select min(standard_cost), category from products group by category;
 
 #27 Wskaż jakie zawody wykonują klienci oraz ile osób zadeklarowało dany zawód. działa
 select job_title, count(job_title) from customers group by job_title order by count(job_title) desc;
+
+#29 Wyświetl dane klientów (imię, nazwisko, adres, miasto, kraj), którzy nie dokonali jeszcze latności
+
+Select customers.first_name, cstomers.last_name, customers.adress, custommers.city, custommers.country_region, orders.paid_data from custommers
+join orders on customers.id = orders.custommers_id
+where paid_data is NULL
+
+#30 Zweryfikuj dla księgowości czy wszystkie zostaly juz opłacone. Przygotuj raport
+
+select invoices.invoice_data AS 'Data faktury' , orders.paid_data AS 'Data płatności' from invoices
+left join orders on orders.id = invoices.order_id;
