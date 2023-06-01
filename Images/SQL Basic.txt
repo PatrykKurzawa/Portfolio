@@ -1,0 +1,48 @@
+#1 Wyświetl wszystkie dane o pracownikach, którzy mieszkają w Redmond.
+
+select * from employees where city = "Redmond";
+
+#3 Wyświetl wszystkie dane produktów, których koszt zakupu jest większy niż 12.0000.
+
+select * from products where standard_cost > 12.0000;
+
+#5 Wyświetl wszystkie informacje o produktach, które mają określona minimalną liczbę zawmówienia.
+
+select * from products where minimum_reorder_quantity is not null;
+
+#8 Wyświetl imię, nazwisko i miasto zamieszkania pracowników, kórych miasto zamieszkania kończy się na nd i jest nie jest to Redmond.
+
+select first_name, last_name, city from employees where city like "%nd" and city != "Redmond";
+
+#11 Wyświetl informacje o produktach, których id dostawcy równa się 4 lub 6 lub 7
+select * from products where supplier_ids in (4,6,7);
+
+#14 Zaprezentuj wszytkie produkty posortowane od najmniejszej ceny zakupu (standard_cost) i największej ceny sprzedaży (list_price).
+
+select * from products order by standard_cost asc, list_price desc;
+
+#16 Wyświetl listę kategorii produktów, które posiadamy w bazie. Posortuj po nazwie kategorii malejąco
+
+select distinct category from products order by category desc;
+
+#18 Przedstaw przełożonemu raport, który będzie zawierała miasto, adres dostawy i opłatę za przewóz
+#zamówienia, którego opłata za przewóz mieści się w przedziale 19.1256 a 78.1999.  działa
+
+select ship_city as Misto, ship_address as Adres, shipping_fee as Opłata 
+from orders where shipping_fee between 19.1256 and 78.1999;
+
+#20 Zlicz liczbę wszystkich zamówień opłaconych kartami kredytowymi.
+
+select count(payment_type) as Typ_Płatności from orders 
+where payment_type = "Credit Card";
+
+#25 Ile łącznie zamówiono produktu Northwind Traders Coffee (id=43) działa
+
+select product_id, sum(quantity) 
+from purchase_order_details where product_id = 43;
+
+#26 działa
+select min(standard_cost), category from products group by category;
+
+#27 Wskaż jakie zawody wykonują klienci oraz ile osób zadeklarowało dany zawód. działa
+select job_title, count(job_title) from customers group by job_title order by count(job_title) desc;
